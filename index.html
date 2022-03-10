@@ -1,41 +1,48 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/a8c98843cb.js" crossorigin="anonymous"></script>
-    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mont Clock</title>
+        <link rel="stylesheet" href="styles.css">
 
-    <title>몽클락</title>
-</head>
-<body>
-    <div class="container">
-        <!-- 헤드 -->
-        <h1 class="text-center">몽클락</h1>
+    </head>
+    <body>
+        <main class="container">
+            <!-- 제목 -->
+            <h1 class="title">Mont Clock</h1>
 
-        <!-- 메인 타이머 -->
-        <div class="timer">
-            <div class="row">
-                <div class="col-5">
-                    <h4 id="minutes"></h4>
+            <div class="timer">
+                <!-- 메인 메뉴 -->
+                <div class="buttonGroup modeButtons">
+                    <button class="modeButton">
+                        Mont
+                    </button>
+                    <button class="modeButton">
+                        Short break
+                    </button>
+                    <button class="modeButton">
+                        Long break
+                    </button>
                 </div>
-                <div class="col-2">
-                    <h4>:</h4>
+                <!-- 타이머 시계 -->
+                <div class="clock">
+                    <span>25</span>
+                    <span>:</span>
+                    <span>00</span>
                 </div>
-                <div class="col-5">
-                    <h4 id="seconds"></h4>
-                </div>
+                <!-- 스타트 버튼 -->
+                <button class="startButton">
+                    START
+                </button>
             </div>
+        </main>
+        <!-- 효과음 -->
+        <div class="hidden">
+            <audio src="break.mp3"></audio>
+            <audio src="break.mp3"></audio>
         </div>
-
-        <div class="containers">
-            <button class="btn"><i class="fas fa-play"></i></button>
-            <a href="index.html"><i class="fas fa-redo-alt"></i></a>
-        </div>
-
-
-    </div>
-</body>
+        <script src="main.js"></script>
+    </body>
 </html>

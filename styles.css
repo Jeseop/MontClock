@@ -1,0 +1,60 @@
+html {
+    box-sizing: border-box;
+    background-image: url(/hallasan.jpg);
+    background-repeat: no-repeat;
+}
+
+* {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --mont: 
+    --shortBreak:
+    --longBreak:
+}
+
+body {
+
+}
+
+.modeButton {
+    font-size: 16px;
+    height: 28px;
+    cursor: pointer;
+    box-shadow: none;
+    font-weight: 300;
+    color: #fff;
+    border: 1px solid transparent;
+    margin: 0px;
+    border-radius: 4px;
+    padding: 2px 12px;
+    background: none;
+}
+
+.clock {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-size: 15rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.startButton {
+    cursor: pointer;
+    font-size: 22px;
+    height: 55px;
+    font-weight: bold;
+    width: 200px;
+    background-color: white;
+    border-width: initial;
+
+}
+
+.hidden {
+    display: none;
+}
