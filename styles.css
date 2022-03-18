@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'GimpoGothicBold00';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/GimpoGothicBold00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 html {
     box-sizing: border-box;
     background-image: url(/hallasan.jpg);
@@ -11,16 +18,55 @@ html {
 }
 
 :root {
-    --mont: 
-    --shortBreak:
-    --longBreak:
+    --mont: #313552;
+    --shortBreak: #B8405E;
+    --longBreak: #2EB086;
 }
 
 body {
+    background-color: var(--mont);
+    transition: background-color 1s ease;
+    font-family: 'GimpoGothicBold00';
+    user-select: none;
+}
 
+progress {
+    border-radius: 2px;
+    width: 100%;
+    height: 15px;
+    top: 0;
+    position: fixed;
+}
+
+progress::-webkit-progress-bar {
+    background-color: rgba(0, 0, 0, 0.1);;
+}
+
+progress::-webkit-progress-value {
+background-color: #fff;
+}
+
+.timer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    text-align: center;
+}
+
+.clock {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-size: 15rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    font-family: 'GimpoGothicBold00';
 }
 
 .modeButton {
+    font-family: "GimpoGothicBold00";
     font-size: 16px;
     height: 28px;
     cursor: pointer;
@@ -34,27 +80,44 @@ body {
     background: none;
 }
 
-.clock {
-    margin-top: 50px;
-    margin-bottom: 30px;
-    font-size: 15rem;
-    line-height: 1;
-    display: flex;
-    align-items: center;
-    font-family: 'Arial', sans-serif;
+.modeButton.active {
+    border-color: #fff;
 }
 
 .startButton {
+    font-family: "GimpoGothicBold00";
     cursor: pointer;
+    box-shadow: #fff 0px 6px 0px;
     font-size: 22px;
     height: 55px;
+    color: #000;
     font-weight: bold;
     width: 200px;
     background-color: white;
     border-width: initial;
+    border-style: none;
+    border-radius: 5px;
+    margin: 20px 0px 0px;
+    padding: 0px 12px;
+    transition: color 0.5s ease-in-out 0s;
+}
 
+/* .startButton.active {
+    transform: translateY(6px);
+    box-shadow: none;
+    outline: none;
+} */
+
+button:focus, button:active {
+    outline: none;
 }
 
 .hidden {
     display: none;
+}
+
+@media screen and (max-width : 550px) {
+    .clock {
+        font-size: 8rem;
+    }
 }
